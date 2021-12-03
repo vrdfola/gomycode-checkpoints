@@ -1,0 +1,39 @@
+ALGORITHM hashtabledistinct elements
+VAR
+    set1 : ARRAY_OF INTEGER[5];
+    set1 : ARRAY_OF INTEGER[5];
+    htab : HASH_TABLE<STRING,INTEGER>.
+    i,j,sum : INTEGER;
+BEGIN
+    FOR i FROM 0 TO 4 STEP 1 DO
+        Read (set1[i]);
+    END_FOR
+
+    FOR J FROM 0 TO 4 STEP 1 DO
+        Read (set1[j]);
+    END_FOR
+
+ FOR i FROM 0 TO 4 STEP 1  DO
+     htab.insert(se1[i],1);
+ END_FOR
+FOR j FROM 0 TO 4 STEP 1  DO
+IF (htab.lookup(set2[j]=true)) THEN
+    htab.insert(set2[j],2);
+    ELSE 
+    htab.insert(set2[j],1);
+END_IF
+END_FOR
+
+FOR i FROM 0 TO 4 STEP 1 DO
+IF (htab.get(set1[i]=1)) THEN
+    sum := sum + set1[i];
+END_IF
+END_FOR
+
+FOR j FROM 0 TO 4 STEP 1 DO
+IF (htab.get(set2[j]=1)) THEN
+    sum := sum + set2[j];
+END_IF
+END_FOR
+ write ("sommme:",sum);
+END

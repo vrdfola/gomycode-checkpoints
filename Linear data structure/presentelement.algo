@@ -1,0 +1,29 @@
+ALGORITHM presentelement
+VAR
+    set1 : ARRAY_OF INTEGER[5];
+    set2 : ARRAY_OF INTEGER[5];
+     i,j,,sum : INTEGER;
+BEGIN
+    sum :=0;
+    FOR i FROM 0 TO 4 STEP 1 DO
+        Read (set1[i]);
+    END_FOR
+
+    FOR J FROM 0 TO 4 STEP 1 DO
+        Read (set1[j]);
+    END_FOR
+      
+     FOR i FROM 0 TO 4 STEP 1 DO
+          FOR j FROM 0 TO 4 STEP 1 DO
+           IF (set1[i]=set2[j]) THEN
+              sum := (sum +set[i])*2 ;
+              
+           END_IF
+    END_FOR
+    
+     END_WHILE
+    write ("sommme:",sum)
+
+
+
+END

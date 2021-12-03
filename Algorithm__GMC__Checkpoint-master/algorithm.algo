@@ -1,0 +1,37 @@
+// STEPS START
+// // * Set a variable that would take in the String of sentence 
+// // * Input the number of character in the string 
+// // * Input the number of words in the string 
+// // * Loop through each of the character in the string   
+// // * Create an array that consist of every vowel in  it
+// // * Use array to check if current character includes a vowel
+// // * Then return array
+// STEPS END
+
+
+ALGORITHM counter
+VAR
+    sentence:- ARRAY_OF STRING;
+
+    sentenceLength: INTEGER:= 0;
+    wordCount: INTEGER:= 0;
+    vowelCount: INTEGER:= 0;
+    vowels: ARRAY_OF CHAR:= ['a', 'e', 'i', 'o', 'u'];
+BEGIN
+    sentenceLength := sentence.length;
+
+    FOR i FROM 0 TO sentenceLength-1 STEP 1 DO
+        IF sentence[i] = ' ' THEN
+            wordCount := wordCount + 1;
+        END_IF;
+    END_FOR;
+
+
+    FOR i FROM 0 TO sentenceLength-1 STEP 1 DO
+        FOR j FROM 0 TO vowels.length-1 STEP 1 DO
+            IF sentence[i] = vowels[j] THEN
+                vowelCount := vowelCount + 1;
+            END_IF;
+        END_FOR;
+    END_FOR;
+END

@@ -1,0 +1,81 @@
+FUNCTION  dot_product(v1,v2:ARRAY_OF FLOAT[3]):float;
+VAR
+    i:INTEGER;
+    ps := FLOAT;
+BEGIN
+    ps:=0;
+    
+    FOR i FROM 0 TO 2 STEP 1  DO
+        ps := ps + v1[i] * v2[i];
+    END_FOR
+    RETURN ps;
+END
+
+PROCEDURE dot_product(var ps:FLOAT ; v1,v2:ARRAY_OF FLOAT[3]);
+VAR
+    i:INTEGER;
+BEGIN
+    ps:=0;
+    
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        ps := ps + v1[i] * v2[i];
+    END_FOR
+
+END
+
+
+
+ALGORITHM vecteur
+VAR
+    v : ARRAY_OF FLOAT[10];
+    vect : ARRAY_OF FLOAT[3];
+    i,j,c : INTEGER;
+BEGIN
+    FOR i FROM 0 TO v.length-1 STEP 1  DO
+        Read (v[i]);
+    END_FOR 
+    FOR i FROM 0 TO v.length-1 STEP 1  DO
+    Read (v[i]);   
+    END_FOR
+   
+        
+
+        IF (v.length=vect.length AND dot_product(v,vect)=0 ) THEN
+            Write ("les deux vecteurs sont orthogonaux");
+        END_IF
+    
+
+
+END
+
+
+
+ALGORITHM vecteur
+VAR
+    v : ARRAY_OF FLOAT[10];
+    vect : ARRAY_OF FLOAT[3];
+    i,j : INTEGER;
+    ps : FLOAT;
+BEGIN
+  BEGIN
+    FOR i FROM 0 TO v.length-1 STEP 1  DO
+        Read (v[i]);
+    END_FOR 
+    FOR i FROM 0 TO v.length-1 STEP 1  DO
+    Read (v[i]);   
+    END_FOR
+   
+        
+
+        IF (v.length=vect.length) THEN
+         dot_product(PS,v,vect) ) ;
+         END_IF
+         IF (ps=0) THEN
+             Write ("les deux vecteurs sont orthogonaux");
+         END_IF
+            
+        
+    
+
+
+END
